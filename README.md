@@ -1,53 +1,80 @@
-# 360° Virtual Tour System
+# 360° Virtual Tour
 
-A stunning, interactive 360° virtual tour application built with Three.js featuring:
+A stunning interactive 360° virtual tour application built with Three.js and modern web technologies.
 
 ## Features
 
-- **Immersive 360° Experience**: Navigate through different rooms with panoramic views
-- **Interactive Hotspots**: Click to move between rooms seamlessly
-- **AI Chat Assistant**: Get information about the tour with an integrated chatbot
-- **3D Avatar Guide**: Virtual guide to enhance the experience
-- **Modern UI**: Beautiful, responsive interface with glassmorphism design
-- **Mobile Friendly**: Optimized for all devices
-
-## Rooms Available
-
-- 🛋️ Living Room
-- 🍳 Kitchen  
-- 🛏️ Bedroom
-- 🛁 Bathroom
-
-## How to Use
-
-1. **Navigation**: Drag to look around in 360°
-2. **Room Switching**: Use the room buttons in the control panel
-3. **Hotspots**: Click on glowing hotspots to move between rooms
-4. **AI Assistant**: Click the chat button to ask questions about the tour
-
-## Setup
-
-1. Clone this repository
-2. Replace the placeholder images in the `images/` folder with your own 360° panoramic images
-3. Update the image paths in `index.html` (lines 673, 699, 724, 749)
-4. Open `index.html` in a web browser
-
-## Image Requirements
-
-- Format: JPG, PNG
-- Resolution: Recommended 4096x2048 (2:1 aspect ratio)
-- Type: Equirectangular 360° panoramic images
-
-## Technologies Used
-
-- Three.js for 3D rendering
-- HTML5 Canvas
-- CSS3 with modern animations
-- Vanilla JavaScript
+- **Immersive 360° Experience**: Navigate through different rooms with panoramic images
+- **Interactive Hotspots**: Click on hotspots to move between rooms
+- **AI Chat Assistant**: Built-in chatbot for tour guidance
+- **3D Avatar Guide**: Animated virtual guide
+- **Modern UI**: Beautiful glassmorphism design with smooth animations
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
 ## Live Demo
 
-Visit the live demo at: [https://mazendeebo.github.io/tour/](https://mazendeebo.github.io/tour/)
+Visit the live demo: [https://mazendeebo.github.io/tour/](https://mazendeebo.github.io/tour/)
+
+## Local Development
+
+1. Clone the repository:
+```bash
+git clone https://github.com/MazenDeebo/tour.git
+cd tour
+```
+
+2. Open `index.html` in a web browser or serve it using a local server:
+```bash
+# Using Python
+python -m http.server 8000
+
+# Using Node.js
+npx serve .
+```
+
+3. Navigate to `http://localhost:8000` in your browser
+
+## Project Structure
+
+```
+tour/
+├── index.html          # Main application file
+├── images/            # Panoramic images
+│   ├── shot-panoramic-composition-bathroom.jpg
+│   ├── shot-panoramic-composition-bedroom.jpg
+│   └── shot-panoramic-composition-living-room.jpg
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Pages deployment
+└── README.md
+```
+
+## Technologies Used
+
+- **Three.js**: 3D graphics and 360° rendering
+- **HTML5 Canvas**: Interactive graphics
+- **CSS3**: Modern styling with glassmorphism effects
+- **JavaScript ES6+**: Application logic and interactivity
+- **GitHub Pages**: Deployment and hosting
+
+## Customization
+
+To add your own panoramic images:
+
+1. Replace the images in the `images/` folder
+2. Update the image paths in `index.html` in the `scenes` array
+3. Adjust hotspot positions as needed
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages using GitHub Actions. Any push to the `main` branch will trigger a new deployment.
+
+## Browser Support
+
+- Chrome 60+
+- Firefox 55+
+- Safari 12+
+- Edge 79+
 
 ## License
 
